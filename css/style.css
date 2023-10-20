@@ -272,6 +272,12 @@
   width: 600px;
   margin: 20px;
 }
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .tabla-precios-servicios {
+    width: 100%;
+    height: 500px;
+  }
+}
 .grid-layout-servicios .tabla-precios-servicios .tabla-servicios1 {
   width: 100%;
   background-color: #1b3039;
@@ -282,11 +288,23 @@
   padding: 5px;
   align-content: center;
 }
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .tabla-precios-servicios .tabla-servicios1 {
+    width: 100%;
+    height: 500px;
+  }
+}
 .grid-layout-servicios .tabla-precios-servicios2 {
   display: flex;
   justify-content: stretch;
   width: 600px;
   margin: 20px;
+}
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .tabla-precios-servicios2 {
+    width: 100%;
+    height: 500px;
+  }
 }
 .grid-layout-servicios .tabla-precios-servicios2 .tabla-servicios2 {
   width: 100%;
@@ -298,25 +316,55 @@
   padding: 5px;
   align-content: center;
 }
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .tabla-precios-servicios2 .tabla-servicios2 {
+    width: 100%;
+    height: 500px;
+  }
+}
 .grid-layout-servicios .caja-reparacion1 {
   width: 600px;
   height: 700px;
   margin: 20px;
+}
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .caja-reparacion1 {
+    width: 100%;
+    height: 500px;
+  }
 }
 .grid-layout-servicios .caja-reparacion1 .video-reparacion1 {
   width: 600px;
   height: 700px;
   border-radius: 30px;
 }
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .caja-reparacion1 .video-reparacion1 {
+    width: 100%;
+    height: 500px;
+  }
+}
 .grid-layout-servicios .caja-reparacion2 {
   width: 600px;
   height: 700px;
   margin: 20px;
 }
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .caja-reparacion2 {
+    width: 100%;
+    height: 500px;
+  }
+}
 .grid-layout-servicios .caja-reparacion2 .video-reparacion2 {
   width: 600px;
   height: 700px;
   border-radius: 30px;
+}
+@media screen and (max-width: 480px) {
+  .grid-layout-servicios .caja-reparacion2 .video-reparacion2 {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 .grid-layout-contacto {

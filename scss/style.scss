@@ -308,6 +308,10 @@ $backgroundColor3: rgb(237, 212, 86);
         justify-content: stretch;
         width: 600px;
         margin: 20px;
+        @include mobile{
+            width: 100%;
+            height: 500px;
+        }
 
         .tabla-servicios1 {
             width: 100%;
@@ -318,6 +322,10 @@ $backgroundColor3: rgb(237, 212, 86);
             border-radius: 30px;
             padding: 5px;
             align-content: center;
+            @include mobile{
+                width: 100%;
+                height: 500px;
+            }
         }
     }
 
@@ -326,6 +334,10 @@ $backgroundColor3: rgb(237, 212, 86);
         justify-content: stretch;
         width: 600px;
         margin: 20px;
+        @include mobile{
+            width: 100%;
+            height: 500px;
+        }
 
         .tabla-servicios2 {
             width: 100%;
@@ -336,6 +348,10 @@ $backgroundColor3: rgb(237, 212, 86);
             border-radius: 30px;
             padding: 5px;
             align-content: center;
+            @include mobile{
+                width: 100%;
+                height: 500px;
+            }
         }
     }
 
@@ -343,11 +359,19 @@ $backgroundColor3: rgb(237, 212, 86);
         width: 600px;
         height: 700px;
         margin: 20px;
+        @include mobile{
+            width: 100%;
+            height: 500px;
+        }
 
         .video-reparacion1 {
             width: 600px;
             height: 700px;
             border-radius: 30px;
+            @include mobile{
+                width: 100%;
+                height: 500px;
+            }
         }
     }
 
@@ -355,11 +379,19 @@ $backgroundColor3: rgb(237, 212, 86);
         width: 600px;
         height: 700px;
         margin: 20px;
+        @include mobile{
+            width: 100%;
+            height: 500px;
+        }
 
         .video-reparacion2 {
             width: 600px;
             height: 700px;
             border-radius: 30px;
+            @include mobile{
+                width: 100%;
+                height: 500px;
+            }
         }
     }
 }
