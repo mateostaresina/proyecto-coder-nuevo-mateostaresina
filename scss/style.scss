@@ -1,0 +1,510 @@
+// Hoja de entrada --> Input //
+
+//  Variables globables  //
+$navColor: #1b3039;
+$backgroundColor: whitesmoke;
+$fontColor1: #fafafa;
+$backgroundColor2: rgb(212, 208, 208);
+$backgroundColor3: rgb(237, 212, 86);
+
+//MEDIA QUERIES //
+@mixin desktop {
+    @media screen and (min-width: 1200px) and (max: width 1919px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+//Estilos//
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+//HEADER Y NAV //
+.header {
+    width: 100%;
+    background-color: $navColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+
+    .nav-items {
+        list-style: none;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+    }
+
+    a {
+        font-size: 700;
+        color: $fontColor1;
+        text-decoration: none;
+    }
+
+    .nav-items li:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+
+        a:hover {
+            color: rgb(237, 212, 86);
+        }
+    }
+
+    @include mobile {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        font-size: 2px;
+    }
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.2);
+}
+
+//FORMATEO INDEX HOME//
+.intro {
+    border: 10px inset $navColor;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    justify-content: space-around;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 50px;
+        padding: 15px;
+        text-align: center;
+        display: grid;
+        border: 1px solid $navColor;
+        box-shadow: 0px 0px 10px;
+
+        .btn-primary {
+            background-color: $navColor;
+            border-color: $navColor;
+        }
+
+        .btn-primary:hover {
+            background-color: $backgroundColor3;
+            border-color: $backgroundColor3;
+            cursor: pointer;
+        }
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+}
+
+
+//FORMATO NOSOTROS //
+.imagen-portada-nosotros {
+    width: 100%;
+    height: 1050px;
+
+    @include mobile {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.grid-layout-nosotros {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .div-nosotros {
+        background-color: $backgroundColor2;
+        margin: 20px;
+        padding: 10px;
+        border: 10px inset $navColor;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px;
+        grid-column: 60%;
+
+        @include mobile {
+            width: 100%;
+            height: 1050px;
+            margin: 5px;
+        }
+    }
+
+    .div-nosotros2 {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        border-radius: 100px;
+        grid-column: 40%;
+
+        .imagen-local {
+            border-radius: 20px;
+            width: 500px;
+            height: 500px;
+
+            @include mobile {
+                width: 100%;
+                height: 400px;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+//FORMATO PRODUCTOS//
+.main-productos {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 20px;
+    justify-content: center;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px
+    }
+
+    .tabla-precios-productos1 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin: 20px;
+
+        .tabla-productos1 {
+            width: 100%;
+            background-color: $navColor;
+            font-size: 80px;
+            color: $backgroundColor;
+            border: 5px solid $backgroundColor;
+            border-radius: 30px;
+            padding: 5px;
+            align-content: center;
+            margin: 20px;
+        }
+    }
+
+    .caja-productos1 {
+        width: 700px;
+        height: 500px;
+        margin: 20px;
+
+        @include mobile {
+            margin: 5px;
+        }
+
+        .foto-productos1 {
+            width: 700px;
+            height: 500px;
+            border-radius: 30px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                height: 300px;
+                margin: 5px;
+            }
+        }
+    }
+
+    .caja-productos2 {
+        width: 500px;
+        height: 600px;
+        margin: 20px;
+
+        .foto-productos2 {
+            width: 500px;
+            height: 600px;
+            border-radius: 30px;
+
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                height: 600px;
+                margin: 5px;
+            }
+        }
+    }
+
+    .tabla-precios-productos2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px;
+
+        .tabla-productos2 {
+            width: 100%;
+            background-color: $navColor;
+            font-size: 80px;
+            color: $backgroundColor;
+            border: 5px solid $backgroundColor;
+            border-radius: 30px;
+            padding: 5px;
+            align-content: center
+        }
+    }
+}
+
+//FORMATO SERVICIOS//
+.grid-layout-servicios {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 20px;
+    justify-content: center;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabla-precios-servicios {
+        display: flex;
+        justify-content: stretch;
+        width: 600px;
+        margin: 20px;
+
+        .tabla-servicios1 {
+            width: 100%;
+            background-color: $navColor;
+            font-size: 80px;
+            color: $backgroundColor;
+            border: 5px solid $backgroundColor;
+            border-radius: 30px;
+            padding: 5px;
+            align-content: center;
+        }
+    }
+
+    .tabla-precios-servicios2 {
+        display: flex;
+        justify-content: stretch;
+        width: 600px;
+        margin: 20px;
+
+        .tabla-servicios2 {
+            width: 100%;
+            background-color: $navColor;
+            font-size: 80px;
+            color: $backgroundColor;
+            border: 5px solid $backgroundColor;
+            border-radius: 30px;
+            padding: 5px;
+            align-content: center;
+        }
+    }
+
+    .caja-reparacion1 {
+        width: 600px;
+        height: 700px;
+        margin: 20px;
+
+        .video-reparacion1 {
+            width: 600px;
+            height: 700px;
+            border-radius: 30px;
+        }
+    }
+
+    .caja-reparacion2 {
+        width: 600px;
+        height: 700px;
+        margin: 20px;
+
+        .video-reparacion2 {
+            width: 600px;
+            height: 700px;
+            border-radius: 30px;
+        }
+    }
+}
+
+//FORMATO CONTACTO//
+.grid-layout-contacto {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    margin: 50px;
+    justify-content: center;
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-contacto {
+        width: 100%;
+        grid-column: 1/4;
+        align-content: center;
+        margin-top: 30px;
+
+        .btn-primary {
+            background-color: $navColor;
+            border-color: $navColor;
+            margin: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: $backgroundColor3;
+            border-color: $backgroundColor3;
+            cursor: pointer;
+        }
+    }
+
+    .section-contacto {
+        display: flex;
+        align-items: row;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .div-contacto {
+        margin: 50px;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .img-section-contacto {
+            width: 30px;
+            height: 30px;
+        }
+
+        .mapa-contacto {
+            margin: 50px;
+            grid-column: 2/3;
+
+            @include mobile {
+                width: 400px;
+                height: 400px;
+
+                .mapa-contacto {
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+//FOOTER //
+footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 8%;
+    background-color: $navColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    height: 70px;
+    margin-bottom: 1rem;
+}
+
+.social-icons-container,
+.footer-menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid $backgroundColor;
+    background-image: url(../assets/img/logoInstagram.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    margin: 1rem;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon:nth-of-type(2) {
+    background-image: url(../assets/img/logoFacebookBlanco.png);
+}
+
+.social-icon:nth-of-type(3) {
+    background-image: url(../assets/img/logoTwitter.png);
+}
+
+.footer-menu-container {
+    list-style-type: none;
+    color: $backgroundColor;
+    font-size: 18px;
+}
+
+.menu-item {
+    margin: 1rem 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.copyright {
+    color: white;
+    opacity: 0.3;
+    text-align: center;
+}
