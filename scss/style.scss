@@ -436,7 +436,7 @@ $backgroundColor3: rgb(237, 212, 86);
             display: flex;
             flex-direction: column;
         }
-    }
+    
 
     .div-contacto {
         margin: 50px;
@@ -444,6 +444,10 @@ $backgroundColor3: rgb(237, 212, 86);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @include mobile{
+            width: 100%;
+            height: 300px;
+        }
 
         .img-section-contacto {
             width: 30px;
@@ -453,19 +457,24 @@ $backgroundColor3: rgb(237, 212, 86);
         .mapa-contacto {
             margin: 50px;
             grid-column: 2/3;
+            width: 100%;
+            height: 300px;
+        }
 
             @include mobile {
-                width: 400px;
+                width: 100%;
                 height: 400px;
-
-                .mapa-contacto {
-                    width: 100%;
-                    height: 300px;
+            }
+                .mapa-contacto1{
+                    @include mobile {
+                        width: 100%;
+                        height: 400px;
                 }
             }
         }
     }
 }
+
 
 
 //FOOTER //
